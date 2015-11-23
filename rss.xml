@@ -4,7 +4,7 @@
         <description><![CDATA[theBlog]]></description>
         <link>https://thegrid.ai/theblog/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Mon, 23 Nov 2015 00:37:39 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Nov 2015 19:06:41 GMT</lastBuildDate>
         <atom:link href="https://thegrid.ai/theblog/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[How TheGrid was Born]]></title>
@@ -12,6 +12,13 @@
             <link>https://thegrid.ai/theblog/how-thegrid-was-born/index.html</link>
             <guid isPermaLink="false">6bc05b63-1211-499a-8d65-8b96960446d1</guid>
             <pubDate>Mon, 23 Nov 2015 00:37:39 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Grid - Hello Beta]]></title>
+            <description><![CDATA[<article><h1>The Grid - Hello Beta</h1><p>Hello Founding Members! A message from our team about what you can expect fromThe Grid Beta as we begin rollout.</p><img src="https://i.ytimg.com/vi/Itv1Di5-NOM/hqdefault.jpg"></article>]]></description>
+            <link>https://www.youtube.com/watch?v=Itv1Di5-NOM&amp;feature=youtu.be</link>
+            <guid isPermaLink="false">b2a89190-9952-487a-945f-c18dcd8b5092</guid>
+            <pubDate>Mon, 23 Nov 2015 19:05:53 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
