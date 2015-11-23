@@ -6,8 +6,8 @@ inLanguage: null
 starred: true
 keywords: []
 description: "TheGrid's birth story told from the CEO's wife perspective"
-datePublished: '2015-11-23T23:21:40.586Z'
-dateModified: '2015-11-23T23:21:06.713Z'
+datePublished: '2015-11-23T23:23:12.087Z'
+dateModified: '2015-11-23T23:23:02.718Z'
 title: "“If people knew how hard I worked to achieve my mastery, it wouldn’t seem so wonderful after all.”–\_Michelangelo"
 author: []
 sourcePath: _posts/2015-11-23-how-thegrid-was-born.md
@@ -24,7 +24,8 @@ _type: Article
 ---
 # 
 
-# 
+# null
+null
 
 # _"If people knew how hard I worked to achieve my mastery, it wouldn't seem so wonderful after all."__-- **Michelangelo**_
 
@@ -42,9 +43,8 @@ Concurrently, some of the same companies were investing thousands of dollars on 
 
 _Here is a photo of Dan's first workspace in our Windsor, CA home that we rented in 2007\. Aka the "Lea Street" house_
 
-_[][1]_
+__
 
 After the idea really started taking off, we realized how much it would take to get it right- to get it perfect.  Dan started writing algorithms to make pixels abide to new rules, and began researching the best of the best programmers in the world and taking note of their names. We raised some money from family and friends to start the venture which has now become TheGrid.  We moved to San Francisco with one employee, a college friend of Dans, and had a live-work set-up in Pacific Heights.  We had an ex-googler Brian Axe helping to set goals and keep Dan organized while Dan and his dad kept funds rolling in.  The project really came to life after an early facebook offer that Dan declined, which led to the loss of his two employees, who wanted the buyout and were realized that Dan's vision exceeded their own.  By then, Dan had contacted
 
 [0]: www.dantocchini.com
-[1]: null
