@@ -1,0 +1,28 @@
+name: theBlog
+favicon: null
+layout_spectrum: 0.30897283158265054
+typography_spectrum: 0.3716396437957883
+cta:
+  domain: null
+  bucket: null
+  version: null
+analytics:
+  google: null
+  facebook: null
+  twitter: null
+opengraph:
+  image: null
+  type: null
+  appId: null
+color:
+  brandColors:
+    - '#71A7FE'
+    - '#399AE7'
+    - '#3B407C'
+    - '#547AB1'
+    - '#CEAFC0'
+  brandStrength: 0.521377575583756
+  lightness: 0.45702012442052364
+  saturation: 0.7394655654206872
+  rhythmicContrast: 0.6404823279008269
+purpose: []
