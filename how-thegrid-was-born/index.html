@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>“If people knew how hard I worked to achieve my mastery, it wouldn’t seem so wonderful after all.”– Michelangelo - theBlog</title><link href="../rss.xml" title="theBlog feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="d14a7eb5-8580-4203-aa52-d17607a21a80"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>“If people knew how hard I worked to achieve my mastery, it wouldn’t seem so wonderful after all.”– Michelangelo - theBlog</title><link href="../rss.xml" title="theBlog feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="52c79050-f58f-4252-b2a4-149b237e0919"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -459,6 +463,7 @@ ul {
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading { background-color: rgb(27, 40, 21); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:active { color: rgb(0, 0, 0); }
@@ -473,6 +478,7 @@ ul {
 #u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline#u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual { background-color: rgb(27, 40, 21); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a { color: rgb(190, 203, 180); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:hover { color: rgb(0, 0, 0); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:active { color: rgb(0, 0, 0); }
@@ -484,6 +490,7 @@ ul {
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline{font-size: 0.364rem; line-height: 0.474rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual { background-color: rgb(27, 40, 21); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a { color: rgb(190, 203, 180); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:hover { color: rgb(0, 0, 0); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:active { color: rgb(0, 0, 0); }
@@ -498,6 +505,7 @@ ul {
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading { background-color: rgb(31, 37, 46); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:active { color: rgb(0, 0, 0); }
@@ -528,6 +536,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading { background-color: rgb(27, 40, 21); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:active { color: rgb(0, 0, 0); }
@@ -542,6 +551,7 @@ display: none;
 #u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline#u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual { background-color: rgb(27, 40, 21); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a { color: rgb(190, 203, 180); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:hover { color: rgb(0, 0, 0); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:active { color: rgb(0, 0, 0); }
@@ -553,6 +563,7 @@ display: none;
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline{font-size: 0.364rem; line-height: 0.474rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual { background-color: rgb(27, 40, 21); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a { color: rgb(190, 203, 180); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:hover { color: rgb(0, 0, 0); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:active { color: rgb(0, 0, 0); }
@@ -567,6 +578,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading { background-color: rgb(31, 37, 46); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:active { color: rgb(0, 0, 0); }
@@ -597,6 +609,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading { background-color: rgb(27, 40, 21); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:active { color: rgb(0, 0, 0); }
@@ -611,6 +624,7 @@ display: none;
 #u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline#u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 4.324rem; position: absolute; top: 0.064rem; left: 1.684rem;}
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual { background-color: rgb(27, 40, 21); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a { color: rgb(190, 203, 180); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:hover { color: rgb(0, 0, 0); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:active { color: rgb(0, 0, 0); }
@@ -622,6 +636,7 @@ display: none;
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline{font-size: 0.364rem; line-height: 0.474rem; width: 4.324rem; position: absolute; top: 0.064rem; left: 1.684rem;}
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual { background-color: rgb(27, 40, 21); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a { color: rgb(190, 203, 180); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:hover { color: rgb(0, 0, 0); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:active { color: rgb(0, 0, 0); }
@@ -636,6 +651,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading { background-color: rgb(31, 37, 46); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:active { color: rgb(0, 0, 0); }
@@ -666,6 +682,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading { background-color: rgb(27, 40, 21); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:active { color: rgb(0, 0, 0); }
@@ -680,6 +697,7 @@ display: none;
 #u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline#u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 6.484rem; position: absolute; top: 0.094rem; left: 2.524rem;}
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual { background-color: rgb(27, 40, 21); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a { color: rgb(190, 203, 180); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:hover { color: rgb(0, 0, 0); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:active { color: rgb(0, 0, 0); }
@@ -691,6 +709,7 @@ display: none;
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline{font-size: 0.364rem; line-height: 0.474rem; width: 6.484rem; position: absolute; top: 0.094rem; left: 2.524rem;}
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual { background-color: rgb(27, 40, 21); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a { color: rgb(190, 203, 180); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:hover { color: rgb(0, 0, 0); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:active { color: rgb(0, 0, 0); }
@@ -705,6 +724,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading { background-color: rgb(31, 37, 46); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:active { color: rgb(0, 0, 0); }
@@ -735,6 +755,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading { background-color: rgb(27, 40, 21); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:active { color: rgb(0, 0, 0); }
@@ -749,6 +770,7 @@ display: none;
 #u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline#u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline{font-size: 0.654rem; line-height: 0.854rem; width: 8.104rem; position: absolute; top: 0.124rem; left: 3.154rem;}
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual { background-color: rgb(27, 40, 21); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a { color: rgb(190, 203, 180); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:hover { color: rgb(0, 0, 0); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:active { color: rgb(0, 0, 0); }
@@ -760,6 +782,7 @@ display: none;
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline{font-size: 0.454rem; line-height: 0.594rem; width: 8.104rem; position: absolute; top: 0.124rem; left: 3.154rem;}
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual { background-color: rgb(27, 40, 21); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a { color: rgb(190, 203, 180); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:hover { color: rgb(0, 0, 0); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:active { color: rgb(0, 0, 0); }
@@ -774,6 +797,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading { background-color: rgb(31, 37, 46); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:active { color: rgb(0, 0, 0); }
@@ -804,6 +828,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav .group.heading { background-color: rgb(27, 40, 21); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav a:active { color: rgb(0, 0, 0); }
@@ -818,6 +843,7 @@ display: none;
 #u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline#u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline{font-size: 0.494rem; line-height: 0.644rem; width: 8.104rem; position: absolute; top: 0.124rem; left: 3.154rem;}
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 .group.textual { background-color: rgb(27, 40, 21); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a { color: rgb(190, 203, 180); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:hover { color: rgb(0, 0, 0); }
 #u-57cd4892-794f-4427-81cd-5c95b5136934#u-57cd4892-794f-4427-81cd-5c95b5136934 a:active { color: rgb(0, 0, 0); }
@@ -829,6 +855,7 @@ display: none;
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline{font-size: 0.344rem; line-height: 0.444rem; width: 8.104rem; position: absolute; top: 0.124rem; left: 3.154rem;}
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline { color: rgb(209, 225, 250); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 .group.textual { background-color: rgb(27, 40, 21); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a { color: rgb(190, 203, 180); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:hover { color: rgb(0, 0, 0); }
 #u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671#u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671 a:active { color: rgb(0, 0, 0); }
@@ -843,6 +870,7 @@ display: none;
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline { color: rgb(209, 225, 250); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading > .title.headline a:hover { color: rgb(224, 201, 198); }
+#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate .group.heading { background-color: rgb(31, 37, 46); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a { color: rgb(190, 203, 180); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:hover { color: rgb(0, 0, 0); }
 #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate#u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate a:active { color: rgb(0, 0, 0); }
@@ -860,7 +888,7 @@ wbr.w1800{ display: block }
  #u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-3 {
 display: none;
 }
-}</style></head><body><div class="layout-system rust mobile" id="page-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_separator w_decoration w_leader w_long_headline w_long_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-3-l-one"></div><style id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-color">body{background-color: rgba(21, 26, 32, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_decoration w_headline w_title w_short_headline w_short_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav"><div kind="group" index="heading" class="group heading group heading" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline-a">theBlog</a></h1></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack textual i first_chapter w_decoration w_headline w_title w_long_headline w_long_title stack textual" itemid="57cd4892-794f-4427-81cd-5c95b5136934" itemtype="h1" diff_index="2" index="textual" kind="stack" score="0.5" missed="0.5" tag="article" id="u-57cd4892-794f-4427-81cd-5c95b5136934"><div kind="group" index="textual" class="group textual group textual" id="u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline"><span class="text-decoration" id="u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline-span"><i data-grid-id="d44db864-92f9-45be-946f-30f174846b34">&#x201C;If people knew <wbr class="w480 w960"></wbr>how <wbr class="w481 w961 w1799"></wbr>hard I <wbr class="w480 w960 w1800"></wbr>worked to <wbr class="w480 w481 w960 w961 w1799"></wbr>achieve my <wbr class="w480 w960"></wbr>mastery, <wbr class="w1800"></wbr>it <wbr class="w480 w481 w960 w961 w1799"></wbr>wouldn&#x2019;t seem <wbr class="w480 w960"></wbr>so <wbr class="w481 w961 w1799"></wbr>wonderful <wbr class="w480 w960 w1800"></wbr>after all.&#x201D;</i><i data-grid-id="d44db864-92f9-45be-946f-30f174846b34">&#x2013; <strong data-grid-id="e3154084-8bb8-4af6-8c0f-abb9b899375c"><wbr class="w480 w481 w960 w961 w1799"></wbr>Michelangelo</strong></i></span></h1></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack textual i last_chapter w_decoration w_headline w_title w_long_headline w_long_title stack textual" itemid="7f1ea71a-bc42-4458-b02f-bd4fb2cb0671" itemtype="h1" diff_index="2" index="textual" kind="stack" score="0.5" missed="0.5" tag="article" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671"><div kind="group" index="textual" class="group textual group textual" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline"><span class="text-decoration" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline-span"><p data-grid-id="e41153b6-32db-4cdd-8418-ab2942265781">I had just finished the <wbr class="w480 w960"></wbr>website for <wbr class="w481 w961 w1799"></wbr>a small <wbr class="w480 w960 w1800"></wbr>janitorial company in <wbr class="w480 w481 w960 w961 w1799"></wbr>Texas as Dan obsessed <wbr class="w480 w960 w1800"></wbr>in <wbr class="w481 w961 w1799"></wbr>photoshop over a <wbr class="w480 w960"></wbr>flyer he was <wbr class="w481 w961 w1799"></wbr>making to <wbr class="w480 w960 w1800"></wbr>pass out in our local <wbr class="w480 w481 w960 w961 w1799"></wbr>downtown shops. He <wbr class="w480 w960"></wbr>had <wbr class="w1800"></wbr>been <wbr class="w481 w961 w1799"></wbr>working on <wbr class="w480 w960"></wbr>making a small 3d <wbr class="w480 w481 w960 w961 w1799"></wbr>object <wbr class="w1800"></wbr>appear when <wbr class="w480 w960"></wbr>you held it up <wbr class="w481 w961 w1799"></wbr>to a <wbr class="w480 w960"></wbr>computer <wbr class="w1800"></wbr>camera and I <wbr class="w480 w481 w960 w961 w1799"></wbr>remember rolling my <wbr class="w480 w960"></wbr>eyes <wbr class="w481 w961 w1799 w1800"></wbr>multiple times at <wbr class="w480 w960"></wbr>his <wbr class="w481 w961 w1799"></wbr>relentlessness. As <wbr class="w480 w960"></wbr>we <wbr class="w1800"></wbr>plugged in <wbr class="w481 w961 w1799"></wbr>day <wbr class="w480 w960"></wbr>after day, frusterated <wbr class="w480 w960"></wbr>with <wbr class="w481 w961 w1799 w1800"></wbr>communicating <wbr class="w480 w960"></wbr>with clients who <wbr class="w481 w961 w1799"></wbr>had <wbr class="w480 w960"></wbr>no <wbr class="w1800"></wbr>experience and very <wbr class="w480 w960"></wbr>little <wbr class="w481 w961 w1799"></wbr>solid vision for <wbr class="w480 w960"></wbr>their <wbr class="w1800"></wbr>site, we <wbr class="w481 w961 w1799"></wbr>became <wbr class="w480 w960"></wbr>cynical toward the <wbr class="w480 w481 w960 w961 w1799"></wbr>disconnect <wbr class="w1800"></wbr>and would <wbr class="w480 w960"></wbr>regularly <wbr class="w481 w961 w1799"></wbr>talk about <wbr class="w480 w960"></wbr>how there <wbr class="w1800"></wbr>must be a <wbr class="w480 w481 w960 w961 w1799"></wbr>better way to publish <wbr class="w480 w960"></wbr>on the <wbr class="w481 w961 w1799 w1800"></wbr>internet.</p><p data-grid-id="7bc79de3-7141-423f-bb1b-a286a9bcc2c6"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Living in a sold home <wbr class="w480 w960"></wbr>in <wbr class="w481 w961 w1799"></wbr>Healdsburg, CA, we <wbr class="w480 w960 w1800"></wbr>were <wbr class="w481 w961 w1799"></wbr>wondering what <wbr class="w480 w960"></wbr>would become of <wbr class="w481 w961 w1799"></wbr>us <wbr class="w480 w960 w1800"></wbr>and our tiny web <wbr class="w480 w960"></wbr>design <wbr class="w481 w961 w1799"></wbr>company, as we <wbr class="w480 w960"></wbr>had <wbr class="w1800"></wbr>only a couple <wbr class="w481 w961 w1799"></wbr>of <wbr class="w480 w960"></wbr>months to make our <wbr class="w480 w960"></wbr>next <wbr class="w1800"></wbr>move <wbr class="w481 w961 w1799"></wbr>as a <wbr class="w480 w960"></wbr>company of 2, and as <wbr class="w480 w960"></wbr>a <wbr class="w481 w961 w1799"></wbr>family. I <wbr class="w1800"></wbr>dont <wbr class="w480 w960"></wbr>remember feeling <wbr class="w480 w481 w960 w961 w1799"></wbr>worried, as he had <wbr class="w480 w960 w1800"></wbr>always <wbr class="w481 w961 w1799"></wbr>provided in our <wbr class="w480 w960"></wbr>2 years of <wbr class="w481 w961 w1799"></wbr>marriage <wbr class="w480 w960 w1800"></wbr>and things always <wbr class="w480 w481 w960 w961 w1799"></wbr>seemed to work out... <wbr class="w480 w960 w1800"></wbr>although <wbr class="w481 w961 w1799"></wbr>this time felt <wbr class="w480 w960"></wbr>different. We had <wbr class="w481 w961 w1799"></wbr>been <wbr class="w480 w960 w1800"></wbr>living in the little town <wbr class="w480 w960"></wbr>for <wbr class="w481 w961 w1799"></wbr>just over 6 months <wbr class="w480 w960 w1800"></wbr>off of food and <wbr class="w481 w961 w1799"></wbr>coffee <wbr class="w480 w960"></wbr>barters with a couple <wbr class="w480 w960"></wbr>of <wbr class="w481 w961 w1799 w1800"></wbr>local business <wbr class="w480 w960"></wbr>owners in exchange <wbr class="w480 w481 w960 w961 w1799"></wbr>for website <wbr class="w1800"></wbr>design. <wbr class="w480 w960"></wbr>One morning <wbr class="w481 w961 w1799"></wbr>as he <wbr class="w480 w960"></wbr>was on his <wbr class="w1800"></wbr>computer I <wbr class="w480 w960"></wbr>had <wbr class="w481 w961 w1799"></wbr>found a <wbr class="w480 w960"></wbr>documentary on <wbr class="w480 w960 w1800"></wbr>Netflix <wbr class="w480 w481 w960 w961 w1799"></wbr>called<i data-grid-id="e4ef3e5a-5940-45c3-ada2-e94d005d342b">Helvetica,</i>and <wbr class="w480 w960"></wbr>told him he <wbr class="w481 w961 w1799"></wbr>had to <wbr class="w480 w960 w1800"></wbr>check it out. The movie <wbr class="w480 w960"></wbr>was <wbr class="w481 w961 w1799"></wbr>about the most <wbr class="w480 w960 w1800"></wbr>used font typeface <wbr class="w480 w481 w960 w961 w1799"></wbr>ever created. He was <wbr class="w480 w960 w1800"></wbr>hooked. He <wbr class="w481 w961 w1799"></wbr>took note <wbr class="w480 w960"></wbr>of Massimo Vignelli, <wbr class="w480 w960 w1800"></wbr>the <wbr class="w481 w961 w1799"></wbr>genius behind the <wbr class="w480 w960"></wbr>design of <wbr class="w481 w961 w1799"></wbr>helvetica <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>ordered a dozen <wbr class="w480 w481 w960 w961 w1799"></wbr>books on typeface <wbr class="w480 w960"></wbr>design <wbr class="w1800"></wbr>from <wbr class="w481 w961 w1799"></wbr>Amazon <wbr class="w480 w960"></wbr>and immersed himself <wbr class="w480 w960"></wbr>in <wbr class="w481 w961 w1799"></wbr>the <wbr class="w1800"></wbr>new realization <wbr class="w480 w960"></wbr>that design <wbr class="w481 w961 w1799"></wbr>was <wbr class="w480 w960"></wbr>actually a <wbr class="w1800"></wbr>study of <wbr class="w480 w960"></wbr>rules. I <wbr class="w481 w961 w1799"></wbr>think once he <wbr class="w480 w960"></wbr>mentioned that <wbr class="w1800"></wbr>if <wbr class="w481 w961 w1799"></wbr>we <wbr class="w480 w960"></wbr>ever had a daughter, <wbr class="w480 w960"></wbr>that he <wbr class="w481 w961 w1799"></wbr>wanted to <wbr class="w480 w960 w1800"></wbr>name her <wbr class="w480 w960"></wbr>"Helvetica"... <wbr class="w481 w961 w1799"></wbr>although <wbr class="w480 w960"></wbr>I strongly <wbr class="w1800"></wbr>objected to <wbr class="w480 w481 w960 w961 w1799"></wbr>that idea Through this <wbr class="w480 w960"></wbr>one <wbr class="w481 w961 w1799 w1800"></wbr>typeface, he <wbr class="w480 w960"></wbr>discovered that <wbr class="w480 w481 w960 w961 w1799"></wbr>aesthetics could <wbr class="w1800"></wbr>be <wbr class="w480 w481 w960 w961 w1799"></wbr>mathematically <wbr class="w480 w960"></wbr>calculated, which <wbr class="w480 w481 w960 w961 w1799"></wbr>would <wbr class="w1800"></wbr>later lay the <wbr class="w480 w960"></wbr>foundation for <wbr class="w481 w961 w1799"></wbr>so <wbr class="w480 w960"></wbr>much more...</p><p data-grid-id="de9c4cd7-8845-4428-9047-726ac9071f7f"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A few days later, Dan <wbr class="w480 w960"></wbr>and I had <wbr class="w481 w961 w1799"></wbr>been helping <wbr class="w480 w960 w1800"></wbr>Dan's dad, Daniele <wbr class="w480 w481 w960 w961 w1799"></wbr>on<a data-grid-id="198a7e5f-1ff9-42ce-924b-d4bdc0607b71" href="https://app.thegrid.io/posts/6bc05b63-1211-499a-8d65-8b96960446d1/www.dantocchini.com">his blog</a>site that <wbr class="w480 w960"></wbr>was <wbr class="w1800"></wbr>created in <wbr class="w480 w481 w960 w961 w1799"></wbr>Wordpress. I had <wbr class="w480 w960"></wbr>learned the <wbr class="w481 w961 w1799"></wbr>basics <wbr class="w1800"></wbr>of <wbr class="w480 w960"></wbr>Wordpress- and was <wbr class="w480 w481 w960 w961 w1799"></wbr>proficient in the <wbr class="w480 w960 w1800"></wbr>basics, enough so <wbr class="w481 w961 w1799"></wbr>that <wbr class="w480 w960"></wbr>I was able to . This was <wbr class="w480 w960 w1800"></wbr>a new <wbr class="w481 w961 w1799"></wbr>template he was <wbr class="w480 w960"></wbr>using and I was <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>showing him how to <wbr class="w480 w960"></wbr>navigate the <wbr class="w481 w961 w1799"></wbr>backend <wbr class="w480 w960"></wbr>of <wbr class="w1800"></wbr>his site. The <wbr class="w480 w481 w960 w961 w1799"></wbr>interesting part of his <wbr class="w480 w960"></wbr>site was <wbr class="w481 w961 w1799 w1800"></wbr>that each post <wbr class="w480 w960"></wbr>he published would <wbr class="w480 w481 w960 w961 w1799"></wbr>show up as <wbr class="w1800"></wbr>a <wbr class="w480 w960"></wbr>rectangular shaped <wbr class="w480 w481 w960 w961 w1799"></wbr>tile. There was very <wbr class="w480 w960"></wbr>little <wbr class="w1800"></wbr>order to <wbr class="w481 w961 w1799"></wbr>how <wbr class="w480 w960"></wbr>these tiles would line <wbr class="w480 w960"></wbr>up and <wbr class="w481 w961 w1799 w1800"></wbr>there were so <wbr class="w480 w960"></wbr>many unnecessary <wbr class="w480 w481 w960 w961 w1799"></wbr>settings and <wbr class="w1800"></wbr>buttons <wbr class="w480 w960"></wbr>you needed <wbr class="w481 w961 w1799"></wbr>to click on <wbr class="w480 w960"></wbr>to just get it <wbr class="w1800"></wbr>to post <wbr class="w480 w481 w960 w961 w1799"></wbr>properly to the <wbr class="w480 w960"></wbr>website. I became <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>frustrated with the <wbr class="w480 w960"></wbr>time it took to <wbr class="w480 w481 w960 w961 w1799"></wbr>perform <wbr class="w1800"></wbr>such a <wbr class="w480 w960"></wbr>seemingly simple <wbr class="w481 w961 w1799"></wbr>task. <wbr class="w480 w960"></wbr>I sat down and <wbr class="w1800"></wbr>asked <wbr class="w480 w960"></wbr>Dan <wbr class="w481 w961 w1799"></wbr>why he thought <wbr class="w480 w960"></wbr>there wasnt a way <wbr class="w481 w961 w1799 w1800"></wbr>to <wbr class="w480 w960"></wbr>build a website in <wbr class="w480 w960"></wbr>which you <wbr class="w481 w961 w1799"></wbr>could enter <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>content and it <wbr class="w480 w481 w960 w961 w1799"></wbr>would just create it <wbr class="w480 w960"></wbr>without the <wbr class="w481 w961 w1799 w1800"></wbr>user <wbr class="w480 w960"></wbr>having to do anything. <wbr class="w480 w960"></wbr>This <wbr class="w481 w961 w1799"></wbr>posed an <wbr class="w480 w960 w1800"></wbr>overarching question <wbr class="w480 w960"></wbr>to <wbr class="w481 w961 w1799"></wbr>all of the work we <wbr class="w480 w960 w1800"></wbr>were doing. It <wbr class="w481 w961 w1799"></wbr>created <wbr class="w480 w960"></wbr>a new </p><p data-grid-id="66044228-c6fc-4d72-b0b6-96013483db64"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>It was the early peak <wbr class="w480 w960"></wbr>of the <wbr class="w481 w961 w1799"></wbr>Facebook Era, <wbr class="w480 w960 w1800"></wbr>even our <wbr class="w480 w481 w960 w961 w1799"></wbr>grandmothers had <wbr class="w480 w960"></wbr>starting their <wbr class="w481 w961 w1799"></wbr>own <wbr class="w480 w960 w1800"></wbr>Facebook pages... and <wbr class="w480 w960"></wbr>it was <wbr class="w481 w961 w1799"></wbr>with this <wbr class="w480 w960 w1800"></wbr>question that made us <wbr class="w480 w481 w960 w961 w1799"></wbr>see that we were <wbr class="w480 w960 w1800"></wbr>giving our own <wbr class="w480 w481 w960 w961 w1799"></wbr>content away to build <wbr class="w480 w960 w1800"></wbr>Facebooks <wbr class="w481 w961 w1799"></wbr>website <wbr class="w480 w960"></wbr>piece by piece. We <wbr class="w480 w960"></wbr>were <wbr class="w481 w961 w1799 w1800"></wbr>giving them our <wbr class="w480 w960"></wbr>photos, our <wbr class="w481 w961 w1799"></wbr>thoughts, <wbr class="w480 w960 w1800"></wbr>sharing who we were, <wbr class="w480 w481 w960 w961 w1799"></wbr>giving them our <wbr class="w480 w960 w1800"></wbr>information and <wbr class="w480 w481 w960 w961 w1799"></wbr>getting nothing in <wbr class="w480 w960"></wbr>return. <wbr class="w481 w961 w1799 w1800"></wbr>Companies <wbr class="w480 w960"></wbr>large and small were <wbr class="w480 w481 w960 w961 w1799"></wbr>creating <wbr class="w1800"></wbr>Facebook <wbr class="w480 w960"></wbr>Business Pages <wbr class="w481 w961 w1799"></wbr>and <wbr class="w480 w960"></wbr>entering their <wbr class="w480 w960 w1800"></wbr>information <wbr class="w481 w961 w1799"></wbr>with the <wbr class="w480 w960"></wbr>motivation to get <wbr class="w480 w960 w1800"></wbr>"likes" <wbr class="w481 w961 w1799"></wbr>and yet they <wbr class="w480 w960"></wbr>still were lacking <wbr class="w481 w961 w1799"></wbr>what <wbr class="w480 w960"></wbr>a <wbr class="w1800"></wbr>website did for <wbr class="w480 w960"></wbr>them.</p><p data-grid-id="d7b99471-e20c-4cea-a429-342ff4146d6a"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Concurrently, some of <wbr class="w480 w960"></wbr>the same <wbr class="w481 w961 w1799"></wbr>companies <wbr class="w480 w960 w1800"></wbr>were investing <wbr class="w480 w481 w960 w961 w1799"></wbr>thousands of dollars <wbr class="w480 w960"></wbr>on having <wbr class="w1800"></wbr>a <wbr class="w481 w961 w1799"></wbr>designer <wbr class="w480 w960"></wbr>create a website for <wbr class="w480 w960"></wbr>their <wbr class="w481 w961 w1799 w1800"></wbr>company...and <wbr class="w480 w960"></wbr>some of the more <wbr class="w480 w481 w960 w961 w1799"></wbr>ambitious <wbr class="w1800"></wbr>small <wbr class="w480 w960"></wbr>business owners <wbr class="w481 w961 w1799"></wbr>were <wbr class="w480 w960"></wbr>attempting to <wbr class="w1800"></wbr>build <wbr class="w480 w960"></wbr>their <wbr class="w481 w961 w1799"></wbr>own in their free <wbr class="w480 w960"></wbr>time. This left <wbr class="w481 w961 w1799"></wbr>the <wbr class="w480 w960 w1800"></wbr>internet contaminated <wbr class="w480 w960"></wbr>with <wbr class="w481 w961 w1799"></wbr>webpages that <wbr class="w480 w960 w1800"></wbr>are barely <wbr class="w481 w961 w1799"></wbr>functioning <wbr class="w480 w960"></wbr>and not properly <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>representing what <wbr class="w480 w960"></wbr>their owners <wbr class="w481 w961 w1799"></wbr>had in <wbr class="w480 w960"></wbr>mind. <wbr class="w1800"></wbr>We decided that <wbr class="w480 w960"></wbr>we <wbr class="w481 w961 w1799"></wbr>would make it our <wbr class="w480 w960 w1800"></wbr>ultimate goal <wbr class="w481 w961 w1799"></wbr>to not <wbr class="w480 w960"></wbr>build custom websites <wbr class="w480 w960 w1800"></wbr>ever <wbr class="w481 w961 w1799"></wbr>again, and that <wbr class="w480 w960"></wbr>we would figure <wbr class="w481 w961 w1799"></wbr>out <wbr class="w480 w960"></wbr>how <wbr class="w1800"></wbr>to create an <wbr class="w480 w960"></wbr>artificial <wbr class="w481 w961 w1799"></wbr>intelligence <wbr class="w480 w960"></wbr>to conquer <wbr class="w1800"></wbr>the task. <wbr class="w480 w481 w960 w961 w1799"></wbr>With his background in <wbr class="w480 w960"></wbr>physics <wbr class="w481 w961 w1799"></wbr>and <wbr class="w1800"></wbr>computer <wbr class="w480 w960"></wbr>science, this was <wbr class="w481 w961 w1799"></wbr>some <wbr class="w480 w960"></wbr>such fun and <wbr class="w1800"></wbr>games to <wbr class="w480 w960"></wbr>Dan, <wbr class="w481 w961 w1799"></wbr>so I sat back and <wbr class="w480 w960"></wbr>watched him <wbr class="w481 w961 w1799 w1800"></wbr>start <wbr class="w480 w960"></wbr>making it become a <wbr class="w480 w960"></wbr>reality. </p><p data-grid-id="6359a182-dabb-4cff-8c4b-236e9ac3df86"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>After the idea really <wbr class="w480 w960"></wbr>started <wbr class="w481 w961"></wbr>taking <wbr class="w1799"></wbr>off, we <wbr class="w480 w960 w1800"></wbr>realized how much <wbr class="w481 w961"></wbr>it <wbr class="w480 w960 w1799"></wbr>would take to get it <wbr class="w480 w960 w1800"></wbr>right- to <wbr class="w481 w961"></wbr>get <wbr class="w1799"></wbr>it perfect. <wbr class="w480 w960"></wbr>Dan started writing <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>algorithms to make <wbr class="w480 w960"></wbr>pixels abide <wbr class="w481 w961 w1799"></wbr>to new <wbr class="w480 w960"></wbr>rules, <wbr class="w1800"></wbr>and began <wbr class="w480 w481 w960 w961 w1799"></wbr>researching the best of <wbr class="w480 w960"></wbr>the best <wbr class="w481 w961 w1799 w1800"></wbr>programmers <wbr class="w480 w960"></wbr>in the world and <wbr class="w480 w481 w960 w961 w1799"></wbr>taking note of <wbr class="w1800"></wbr>their <wbr class="w480 w960"></wbr>names. We <wbr class="w481 w961 w1799"></wbr>raised <wbr class="w480 w960"></wbr>some money from <wbr class="w480 w960 w1800"></wbr>family <wbr class="w481 w961 w1799"></wbr>and friends to <wbr class="w480 w960"></wbr>start the venture <wbr class="w480 w481 w960 w961 w1799"></wbr>which <wbr class="w1800"></wbr>has now become <wbr class="w480 w960"></wbr>TheGrid. <wbr class="w481 w961 w1799"></wbr>We moved to <wbr class="w480 w960"></wbr>San <wbr class="w1800"></wbr>Francisco with <wbr class="w481 w961 w1799"></wbr>one <wbr class="w480 w960"></wbr>employee, a college <wbr class="w480 w960"></wbr>friend <wbr class="w1800"></wbr>of <wbr class="w481 w961 w1799"></wbr>Dans, and <wbr class="w480 w960"></wbr>had a live-work set-<wbr class="w480 w960"></wbr>up <wbr class="w481 w961 w1799"></wbr>in Pacific <wbr class="w1800"></wbr>Heights. <wbr class="w480 w960"></wbr>We had an ex-<wbr class="w481 w961 w1799"></wbr>googler <wbr class="w480 w960"></wbr>Brian Axe <wbr class="w1800"></wbr>helping to <wbr class="w480 w960"></wbr>set <wbr class="w481 w961 w1799"></wbr>goals and keep Dan <wbr class="w480 w960"></wbr>organized <wbr class="w481 w961 w1799 w1800"></wbr>while Dan <wbr class="w480 w960"></wbr>and his dad kept funds <wbr class="w480 w481 w960 w961 w1799"></wbr>rolling in. <wbr class="w1800"></wbr>The project <wbr class="w480 w960"></wbr>really came <wbr class="w481 w961 w1799"></wbr>to life <wbr class="w480 w960"></wbr>after an early <wbr class="w1800"></wbr>facebook <wbr class="w480 w481 w960 w961 w1799"></wbr>offer that Dan <wbr class="w480 w960"></wbr>declined, which led <wbr class="w481 w961 w1799"></wbr>to <wbr class="w480 w960 w1800"></wbr>the loss of his two <wbr class="w480 w960"></wbr>employees, <wbr class="w481 w961 w1799"></wbr>who <wbr class="w480 w960"></wbr>wanted <wbr class="w1800"></wbr>the buyout <wbr class="w480 w960"></wbr>and were <wbr class="w481 w961 w1799"></wbr>realized that <wbr class="w480 w960"></wbr>Dan's <wbr class="w1800"></wbr>vision <wbr class="w481 w961 w1799"></wbr>exceeded <wbr class="w480 w960"></wbr>their own. By then, <wbr class="w480 w960"></wbr>Dan <wbr class="w481 w961 w1799"></wbr>had <wbr class="w1800"></wbr>teamed up <wbr class="w480 w960"></wbr>with Svetly who <wbr class="w481 w961 w1799"></wbr>was <wbr class="w480 w960"></wbr>working <wbr class="w1800"></wbr>through <wbr class="w480 w960"></wbr>company <wbr class="w481 w961 w1799"></wbr>valuations <wbr class="w480 w960"></wbr>and come up <wbr class="w1800"></wbr>with new <wbr class="w480 w481 w960 w961 w1799"></wbr>goals for the team. It <wbr class="w480 w960"></wbr>was a small <wbr class="w481 w961 w1799 w1800"></wbr>core team <wbr class="w480 w960"></wbr>and as we got more <wbr class="w480 w481 w960 w961 w1799"></wbr>investors on <wbr class="w1800"></wbr>board <wbr class="w480 w960"></wbr>with the <wbr class="w481 w961 w1799"></wbr>vision, Dan <wbr class="w480 w960"></wbr>was concurrently <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>recruiting new <wbr class="w480 w960"></wbr>designers and <wbr class="w480 w481 w960 w961 w1799"></wbr>developers to <wbr class="w1800"></wbr>the <wbr class="w480 w960"></wbr>team. It was a <wbr class="w481 w961 w1799"></wbr>crazy <wbr class="w480 w960"></wbr>time and a great <wbr class="w480 w960 w1800"></wbr>experience <wbr class="w481 w961 w1799"></wbr>for me. I <wbr class="w480 w960"></wbr>watched my husband <wbr class="w480 w481 w960 w961 w1799"></wbr>fail, <wbr class="w1800"></wbr>lead, succeed, <wbr class="w480 w960"></wbr>win, lose, and <wbr class="w481 w961 w1799"></wbr>stay a <wbr class="w480 w960"></wbr>solid, <wbr class="w1800"></wbr>never stressed <wbr class="w480 w960"></wbr>man of <wbr class="w481 w961 w1799"></wbr>his word. From <wbr class="w480 w960"></wbr>a wife's <wbr class="w1800"></wbr>lens, it <wbr class="w481 w961 w1799"></wbr>has <wbr class="w480 w960"></wbr>not been perfect, or <wbr class="w480 w960"></wbr>easy, or <wbr class="w481 w961 w1799 w1800"></wbr>painless but it <wbr class="w480 w960"></wbr>has been our own. <wbr class="w481 w961 w1799"></wbr>His <wbr class="w480 w960"></wbr>clear <wbr class="w1800"></wbr>vision is what I <wbr class="w480 w960"></wbr>know will <wbr class="w481 w961 w1799"></wbr>pay off <wbr class="w480 w960"></wbr>when this all <wbr class="w1800"></wbr>works... <wbr class="w480 w960"></wbr>and <wbr class="w481 w961 w1799"></wbr>as I type this blog, <wbr class="w480 w960"></wbr>using the first <wbr class="w481 w961 w1799 w1800"></wbr>working <wbr class="w480 w960"></wbr>version of the "Post <wbr class="w480 w481 w960 w961 w1799"></wbr>Editor" I <wbr class="w1800"></wbr>couldn't be <wbr class="w480 w960"></wbr>more proud <wbr class="w481 w961 w1799"></wbr>of him <wbr class="w480 w960"></wbr>and the team's <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>accomplishments and <wbr class="w480 w960"></wbr>over five <wbr class="w481 w961 w1799"></wbr>years. The <wbr class="w480 w960 w1800"></wbr>sacrifices they have <wbr class="w480 w481 w960 w961 w1799"></wbr>made to attempt the <wbr class="w480 w960 w1800"></wbr>impossible <wbr class="w481 w961 w1799"></wbr>have been <wbr class="w480 w960"></wbr>unprecedented and <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>painful to watch. <wbr class="w480 w960"></wbr>Blood family and <wbr class="w480 w481 w960 w961 w1799"></wbr>friends <wbr class="w1800"></wbr>have had to <wbr class="w480 w960"></wbr>come second <wbr class="w481 w961 w1799"></wbr>to <wbr class="w480 w960"></wbr>TheGrid family, <wbr class="w1800"></wbr>but <wbr class="w480 w960"></wbr>the <wbr class="w481 w961 w1799"></wbr>possibility is still <wbr class="w480 w960"></wbr>endless and as <wbr class="w481 w961 w1799"></wbr>the <wbr class="w480 w960 w1800"></wbr>release of an actual <wbr class="w480 w960"></wbr>first <wbr class="w481 w961 w1799"></wbr>working version <wbr class="w480 w960 w1800"></wbr>draws nearer, I <wbr class="w481 w961 w1799"></wbr>cannot <wbr class="w480 w960"></wbr>describe in words how <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>bittersweet it feels...</p><p data-grid-id="3e3e8745-252f-4b87-8d28-8786be792392"><i data-grid-id="12ec5299-ab87-481b-9a19-b631bc9a9d65"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Here is a photo of <wbr class="w480 w960"></wbr>Dan's first <wbr class="w481 w961 w1799"></wbr>workspace <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>our Windsor, CA <wbr class="w480 w481 w960 w961 w1799"></wbr>home that we rented <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>2007. Aka <wbr class="w481 w961 w1799"></wbr>the "Lea <wbr class="w480 w960"></wbr>Street" house</i></p></span></h1></div></article><article subject="panel" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_decoration w_headline w_title w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline-a">theBlog feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_separator w_decoration w_leader w_long_headline w_long_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-3-l-one"></div><style id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-color">body{background-color: rgba(21, 26, 32, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_separator w_decoration w_leader w_long_headline w_long_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-3-l-one"></div><style id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-color">body{background-color: rgba(21, 26, 32, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+}</style></head><body><div class="layout-system rust mobile" id="page-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_separator w_decoration w_leader w_long_headline w_long_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-mobile-l-one-3-l-one"></div><style id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-color">body{background-color: rgba(21, 26, 32, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_decoration w_headline w_title w_short_headline w_short_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav"><div kind="group" index="heading" class="group heading group heading" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-nav-g-heading-t-headline-a">theBlog</a></h1></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack textual i first_chapter w_decoration w_headline w_title w_long_headline w_long_title stack textual" itemid="57cd4892-794f-4427-81cd-5c95b5136934" itemtype="h1" diff_index="2" index="textual" kind="stack" score="0.5" missed="0.5" tag="article" id="u-57cd4892-794f-4427-81cd-5c95b5136934"><div kind="group" index="textual" class="group textual group textual" id="u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline"><span class="text-decoration" id="u-57cd4892-794f-4427-81cd-5c95b5136934-g-textual-t-headline-span"><i data-grid-id="d44db864-92f9-45be-946f-30f174846b34">&#x201C;If people knew <wbr class="w480 w960"></wbr>how <wbr class="w481 w961 w1799"></wbr>hard I <wbr class="w480 w960 w1800"></wbr>worked to <wbr class="w480 w481 w960 w961 w1799"></wbr>achieve my <wbr class="w480 w960"></wbr>mastery, <wbr class="w1800"></wbr>it <wbr class="w480 w481 w960 w961 w1799"></wbr>wouldn&#x2019;t seem <wbr class="w480 w960"></wbr>so <wbr class="w481 w961 w1799"></wbr>wonderful <wbr class="w480 w960 w1800"></wbr>after all.&#x201D;</i><i data-grid-id="d44db864-92f9-45be-946f-30f174846b34">&#x2013; <wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><strong data-grid-id="e3154084-8bb8-4af6-8c0f-abb9b899375c">Michelangelo</strong></i></span></h1></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack textual i last_chapter w_decoration w_headline w_title w_long_headline w_long_title stack textual" itemid="7f1ea71a-bc42-4458-b02f-bd4fb2cb0671" itemtype="h1" diff_index="2" index="textual" kind="stack" score="0.5" missed="0.5" tag="article" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671"><div kind="group" index="textual" class="group textual group textual" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline"><span class="text-decoration" id="u-7f1ea71a-bc42-4458-b02f-bd4fb2cb0671-g-textual-t-headline-span"><p data-grid-id="e41153b6-32db-4cdd-8418-ab2942265781">I had just finished the <wbr class="w480 w960"></wbr>website for <wbr class="w481 w961 w1799"></wbr>a small <wbr class="w480 w960 w1800"></wbr>janitorial company in <wbr class="w480 w481 w960 w961 w1799"></wbr>Texas as Dan obsessed <wbr class="w480 w960 w1800"></wbr>in <wbr class="w481 w961 w1799"></wbr>photoshop over a <wbr class="w480 w960"></wbr>flyer he was <wbr class="w481 w961 w1799"></wbr>making to <wbr class="w480 w960 w1800"></wbr>pass out in our local <wbr class="w480 w481 w960 w961 w1799"></wbr>downtown shops. He <wbr class="w480 w960"></wbr>had <wbr class="w1800"></wbr>been <wbr class="w481 w961 w1799"></wbr>working on <wbr class="w480 w960"></wbr>making a small 3d <wbr class="w480 w481 w960 w961 w1799"></wbr>object <wbr class="w1800"></wbr>appear when <wbr class="w480 w960"></wbr>you held it up <wbr class="w481 w961 w1799"></wbr>to a <wbr class="w480 w960"></wbr>computer <wbr class="w1800"></wbr>camera and I <wbr class="w480 w481 w960 w961 w1799"></wbr>remember rolling my <wbr class="w480 w960"></wbr>eyes <wbr class="w481 w961 w1799 w1800"></wbr>multiple times at <wbr class="w480 w960"></wbr>his <wbr class="w481 w961 w1799"></wbr>relentlessness. As <wbr class="w480 w960"></wbr>we <wbr class="w1800"></wbr>plugged in <wbr class="w481 w961 w1799"></wbr>day <wbr class="w480 w960"></wbr>after day, frusterated <wbr class="w480 w960"></wbr>with <wbr class="w481 w961 w1799 w1800"></wbr>communicating <wbr class="w480 w960"></wbr>with clients who <wbr class="w481 w961 w1799"></wbr>had <wbr class="w480 w960"></wbr>no <wbr class="w1800"></wbr>experience and very <wbr class="w480 w960"></wbr>little <wbr class="w481 w961 w1799"></wbr>solid vision for <wbr class="w480 w960"></wbr>their <wbr class="w1800"></wbr>site, we <wbr class="w481 w961 w1799"></wbr>became <wbr class="w480 w960"></wbr>cynical toward the <wbr class="w480 w481 w960 w961 w1799"></wbr>disconnect <wbr class="w1800"></wbr>and would <wbr class="w480 w960"></wbr>regularly <wbr class="w481 w961 w1799"></wbr>talk about <wbr class="w480 w960"></wbr>how there <wbr class="w1800"></wbr>must be a <wbr class="w480 w481 w960 w961 w1799"></wbr>better way to publish <wbr class="w480 w960"></wbr>on the <wbr class="w481 w961 w1799 w1800"></wbr>internet.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p data-grid-id="7bc79de3-7141-423f-bb1b-a286a9bcc2c6">Living in a sold home <wbr class="w480 w960"></wbr>in <wbr class="w481 w961 w1799"></wbr>Healdsburg, CA, we <wbr class="w480 w960 w1800"></wbr>were <wbr class="w481 w961 w1799"></wbr>wondering what <wbr class="w480 w960"></wbr>would become of <wbr class="w481 w961 w1799"></wbr>us <wbr class="w480 w960 w1800"></wbr>and our tiny web <wbr class="w480 w960"></wbr>design <wbr class="w481 w961 w1799"></wbr>company, as we <wbr class="w480 w960"></wbr>had <wbr class="w1800"></wbr>only a couple <wbr class="w481 w961 w1799"></wbr>of <wbr class="w480 w960"></wbr>months to make our <wbr class="w480 w960"></wbr>next <wbr class="w1800"></wbr>move <wbr class="w481 w961 w1799"></wbr>as a <wbr class="w480 w960"></wbr>company of 2, and as <wbr class="w480 w960"></wbr>a <wbr class="w481 w961 w1799"></wbr>family. I <wbr class="w1800"></wbr>dont <wbr class="w480 w960"></wbr>remember feeling <wbr class="w480 w481 w960 w961 w1799"></wbr>worried, as he had <wbr class="w480 w960 w1800"></wbr>always <wbr class="w481 w961 w1799"></wbr>provided in our <wbr class="w480 w960"></wbr>2 years of <wbr class="w481 w961 w1799"></wbr>marriage <wbr class="w480 w960 w1800"></wbr>and things always <wbr class="w480 w481 w960 w961 w1799"></wbr>seemed to work out... <wbr class="w480 w960 w1800"></wbr>although <wbr class="w481 w961 w1799"></wbr>this time felt <wbr class="w480 w960"></wbr>different. We had <wbr class="w481 w961 w1799"></wbr>been <wbr class="w480 w960 w1800"></wbr>living in the little town <wbr class="w480 w960"></wbr>for <wbr class="w481 w961 w1799"></wbr>just over 6 months <wbr class="w480 w960 w1800"></wbr>off of food and <wbr class="w481 w961 w1799"></wbr>coffee <wbr class="w480 w960"></wbr>barters with a couple <wbr class="w480 w960"></wbr>of <wbr class="w481 w961 w1799 w1800"></wbr>local business <wbr class="w480 w960"></wbr>owners in exchange <wbr class="w480 w481 w960 w961 w1799"></wbr>for website <wbr class="w1800"></wbr>design. <wbr class="w480 w960"></wbr>One morning <wbr class="w481 w961 w1799"></wbr>as he <wbr class="w480 w960"></wbr>was on his <wbr class="w1800"></wbr>computer I <wbr class="w480 w960"></wbr>had <wbr class="w481 w961 w1799"></wbr>found a <wbr class="w480 w960"></wbr>documentary on <wbr class="w480 w960 w1800"></wbr>Netflix <wbr class="w480 w481 w960 w961 w1799"></wbr>called<i data-grid-id="e4ef3e5a-5940-45c3-ada2-e94d005d342b">Helvetica,</i>and <wbr class="w480 w960"></wbr>told him he <wbr class="w481 w961 w1799"></wbr>had to <wbr class="w480 w960 w1800"></wbr>check it out. The movie <wbr class="w480 w960"></wbr>was <wbr class="w481 w961 w1799"></wbr>about the most <wbr class="w480 w960 w1800"></wbr>used font typeface <wbr class="w480 w481 w960 w961 w1799"></wbr>ever created. He was <wbr class="w480 w960 w1800"></wbr>hooked. He <wbr class="w481 w961 w1799"></wbr>took note <wbr class="w480 w960"></wbr>of Massimo Vignelli, <wbr class="w480 w960 w1800"></wbr>the <wbr class="w481 w961 w1799"></wbr>genius behind the <wbr class="w480 w960"></wbr>design of <wbr class="w481 w961 w1799"></wbr>helvetica <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>ordered a dozen <wbr class="w480 w481 w960 w961 w1799"></wbr>books on typeface <wbr class="w480 w960"></wbr>design <wbr class="w1800"></wbr>from <wbr class="w481 w961 w1799"></wbr>Amazon <wbr class="w480 w960"></wbr>and immersed himself <wbr class="w480 w960"></wbr>in <wbr class="w481 w961 w1799"></wbr>the <wbr class="w1800"></wbr>new realization <wbr class="w480 w960"></wbr>that design <wbr class="w481 w961 w1799"></wbr>was <wbr class="w480 w960"></wbr>actually a <wbr class="w1800"></wbr>study of <wbr class="w480 w960"></wbr>rules. I <wbr class="w481 w961 w1799"></wbr>think once he <wbr class="w480 w960"></wbr>mentioned that <wbr class="w1800"></wbr>if <wbr class="w481 w961 w1799"></wbr>we <wbr class="w480 w960"></wbr>ever had a daughter, <wbr class="w480 w960"></wbr>that he <wbr class="w481 w961 w1799"></wbr>wanted to <wbr class="w480 w960 w1800"></wbr>name her <wbr class="w480 w960"></wbr>"Helvetica"... <wbr class="w481 w961 w1799"></wbr>although <wbr class="w480 w960"></wbr>I strongly <wbr class="w1800"></wbr>objected to <wbr class="w480 w481 w960 w961 w1799"></wbr>that idea Through this <wbr class="w480 w960"></wbr>one <wbr class="w481 w961 w1799 w1800"></wbr>typeface, he <wbr class="w480 w960"></wbr>discovered that <wbr class="w480 w481 w960 w961 w1799"></wbr>aesthetics could <wbr class="w1800"></wbr>be <wbr class="w480 w481 w960 w961 w1799"></wbr>mathematically <wbr class="w480 w960"></wbr>calculated, which <wbr class="w480 w481 w960 w961 w1799"></wbr>would <wbr class="w1800"></wbr>later lay the <wbr class="w480 w960"></wbr>foundation for <wbr class="w481 w961 w1799"></wbr>so <wbr class="w480 w960"></wbr>much more...</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p data-grid-id="de9c4cd7-8845-4428-9047-726ac9071f7f">A few days later, Dan <wbr class="w480 w960"></wbr>and I had <wbr class="w481 w961 w1799"></wbr>been helping <wbr class="w480 w960 w1800"></wbr>Dan's dad, Daniele <wbr class="w480 w481 w960 w961 w1799"></wbr>on<a data-grid-id="198a7e5f-1ff9-42ce-924b-d4bdc0607b71" href="https://app.thegrid.io/posts/6bc05b63-1211-499a-8d65-8b96960446d1/www.dantocchini.com">his blog</a>site that <wbr class="w480 w960"></wbr>was <wbr class="w1800"></wbr>created in <wbr class="w480 w481 w960 w961 w1799"></wbr>Wordpress. I had <wbr class="w480 w960"></wbr>learned the <wbr class="w481 w961 w1799"></wbr>basics <wbr class="w1800"></wbr>of <wbr class="w480 w960"></wbr>Wordpress- and was <wbr class="w480 w481 w960 w961 w1799"></wbr>proficient in the <wbr class="w480 w960 w1800"></wbr>basics, enough so <wbr class="w481 w961 w1799"></wbr>that <wbr class="w480 w960"></wbr>I was able to . This was <wbr class="w480 w960 w1800"></wbr>a new <wbr class="w481 w961 w1799"></wbr>template he was <wbr class="w480 w960"></wbr>using and I was <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>showing him how to <wbr class="w480 w960"></wbr>navigate the <wbr class="w481 w961 w1799"></wbr>backend <wbr class="w480 w960"></wbr>of <wbr class="w1800"></wbr>his site. The <wbr class="w480 w481 w960 w961 w1799"></wbr>interesting part of his <wbr class="w480 w960"></wbr>site was <wbr class="w481 w961 w1799 w1800"></wbr>that each post <wbr class="w480 w960"></wbr>he published would <wbr class="w480 w481 w960 w961 w1799"></wbr>show up as <wbr class="w1800"></wbr>a <wbr class="w480 w960"></wbr>rectangular shaped <wbr class="w480 w481 w960 w961 w1799"></wbr>tile. There was very <wbr class="w480 w960"></wbr>little <wbr class="w1800"></wbr>order to <wbr class="w481 w961 w1799"></wbr>how <wbr class="w480 w960"></wbr>these tiles would line <wbr class="w480 w960"></wbr>up and <wbr class="w481 w961 w1799 w1800"></wbr>there were so <wbr class="w480 w960"></wbr>many unnecessary <wbr class="w480 w481 w960 w961 w1799"></wbr>settings and <wbr class="w1800"></wbr>buttons <wbr class="w480 w960"></wbr>you needed <wbr class="w481 w961 w1799"></wbr>to click on <wbr class="w480 w960"></wbr>to just get it <wbr class="w1800"></wbr>to post <wbr class="w480 w481 w960 w961 w1799"></wbr>properly to the <wbr class="w480 w960"></wbr>website. I became <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>frustrated with the <wbr class="w480 w960"></wbr>time it took to <wbr class="w480 w481 w960 w961 w1799"></wbr>perform <wbr class="w1800"></wbr>such a <wbr class="w480 w960"></wbr>seemingly simple <wbr class="w481 w961 w1799"></wbr>task. <wbr class="w480 w960"></wbr>I sat down and <wbr class="w1800"></wbr>asked <wbr class="w480 w960"></wbr>Dan <wbr class="w481 w961 w1799"></wbr>why he thought <wbr class="w480 w960"></wbr>there wasnt a way <wbr class="w481 w961 w1799 w1800"></wbr>to <wbr class="w480 w960"></wbr>build a website in <wbr class="w480 w960"></wbr>which you <wbr class="w481 w961 w1799"></wbr>could enter <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>content and it <wbr class="w480 w481 w960 w961 w1799"></wbr>would just create it <wbr class="w480 w960"></wbr>without the <wbr class="w481 w961 w1799 w1800"></wbr>user <wbr class="w480 w960"></wbr>having to do anything. <wbr class="w480 w960"></wbr>This <wbr class="w481 w961 w1799"></wbr>posed an <wbr class="w480 w960 w1800"></wbr>overarching question <wbr class="w480 w960"></wbr>to <wbr class="w481 w961 w1799"></wbr>all of the work we <wbr class="w480 w960 w1800"></wbr>were doing. It <wbr class="w481 w961 w1799"></wbr>created <wbr class="w480 w960"></wbr>a new </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p data-grid-id="66044228-c6fc-4d72-b0b6-96013483db64">It was the early peak <wbr class="w480 w960"></wbr>of the <wbr class="w481 w961 w1799"></wbr>Facebook Era, <wbr class="w480 w960 w1800"></wbr>even our <wbr class="w480 w481 w960 w961 w1799"></wbr>grandmothers had <wbr class="w480 w960"></wbr>starting their <wbr class="w481 w961 w1799"></wbr>own <wbr class="w480 w960 w1800"></wbr>Facebook pages... and <wbr class="w480 w960"></wbr>it was <wbr class="w481 w961 w1799"></wbr>with this <wbr class="w480 w960 w1800"></wbr>question that made us <wbr class="w480 w481 w960 w961 w1799"></wbr>see that we were <wbr class="w480 w960 w1800"></wbr>giving our own <wbr class="w480 w481 w960 w961 w1799"></wbr>content away to build <wbr class="w480 w960 w1800"></wbr>Facebooks <wbr class="w481 w961 w1799"></wbr>website <wbr class="w480 w960"></wbr>piece by piece. We <wbr class="w480 w960"></wbr>were <wbr class="w481 w961 w1799 w1800"></wbr>giving them our <wbr class="w480 w960"></wbr>photos, our <wbr class="w481 w961 w1799"></wbr>thoughts, <wbr class="w480 w960 w1800"></wbr>sharing who we were, <wbr class="w480 w481 w960 w961 w1799"></wbr>giving them our <wbr class="w480 w960 w1800"></wbr>information and <wbr class="w480 w481 w960 w961 w1799"></wbr>getting nothing in <wbr class="w480 w960"></wbr>return. <wbr class="w481 w961 w1799 w1800"></wbr>Companies <wbr class="w480 w960"></wbr>large and small were <wbr class="w480 w481 w960 w961 w1799"></wbr>creating <wbr class="w1800"></wbr>Facebook <wbr class="w480 w960"></wbr>Business Pages <wbr class="w481 w961 w1799"></wbr>and <wbr class="w480 w960"></wbr>entering their <wbr class="w480 w960 w1800"></wbr>information <wbr class="w481 w961 w1799"></wbr>with the <wbr class="w480 w960"></wbr>motivation to get <wbr class="w480 w960 w1800"></wbr>"likes" <wbr class="w481 w961 w1799"></wbr>and yet they <wbr class="w480 w960"></wbr>still were lacking <wbr class="w481 w961 w1799"></wbr>what <wbr class="w480 w960"></wbr>a <wbr class="w1800"></wbr>website did for <wbr class="w480 w960"></wbr>them.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p data-grid-id="d7b99471-e20c-4cea-a429-342ff4146d6a">Concurrently, some of <wbr class="w480 w960"></wbr>the same <wbr class="w481 w961 w1799"></wbr>companies <wbr class="w480 w960 w1800"></wbr>were investing <wbr class="w480 w481 w960 w961 w1799"></wbr>thousands of dollars <wbr class="w480 w960"></wbr>on having <wbr class="w1800"></wbr>a <wbr class="w481 w961 w1799"></wbr>designer <wbr class="w480 w960"></wbr>create a website for <wbr class="w480 w960"></wbr>their <wbr class="w481 w961 w1799 w1800"></wbr>company...and <wbr class="w480 w960"></wbr>some of the more <wbr class="w480 w481 w960 w961 w1799"></wbr>ambitious <wbr class="w1800"></wbr>small <wbr class="w480 w960"></wbr>business owners <wbr class="w481 w961 w1799"></wbr>were <wbr class="w480 w960"></wbr>attempting to <wbr class="w1800"></wbr>build <wbr class="w480 w960"></wbr>their <wbr class="w481 w961 w1799"></wbr>own in their free <wbr class="w480 w960"></wbr>time. This left <wbr class="w481 w961 w1799"></wbr>the <wbr class="w480 w960 w1800"></wbr>internet contaminated <wbr class="w480 w960"></wbr>with <wbr class="w481 w961 w1799"></wbr>webpages that <wbr class="w480 w960 w1800"></wbr>are barely <wbr class="w481 w961 w1799"></wbr>functioning <wbr class="w480 w960"></wbr>and not properly <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>representing what <wbr class="w480 w960"></wbr>their owners <wbr class="w481 w961 w1799"></wbr>had in <wbr class="w480 w960"></wbr>mind. <wbr class="w1800"></wbr>We decided that <wbr class="w480 w960"></wbr>we <wbr class="w481 w961 w1799"></wbr>would make it our <wbr class="w480 w960 w1800"></wbr>ultimate goal <wbr class="w481 w961 w1799"></wbr>to not <wbr class="w480 w960"></wbr>build custom websites <wbr class="w480 w960 w1800"></wbr>ever <wbr class="w481 w961 w1799"></wbr>again, and that <wbr class="w480 w960"></wbr>we would figure <wbr class="w481 w961 w1799"></wbr>out <wbr class="w480 w960"></wbr>how <wbr class="w1800"></wbr>to create an <wbr class="w480 w960"></wbr>artificial <wbr class="w481 w961 w1799"></wbr>intelligence <wbr class="w480 w960"></wbr>to conquer <wbr class="w1800"></wbr>the task. <wbr class="w480 w481 w960 w961 w1799"></wbr>With his background in <wbr class="w480 w960"></wbr>physics <wbr class="w481 w961 w1799"></wbr>and <wbr class="w1800"></wbr>computer <wbr class="w480 w960"></wbr>science, this was <wbr class="w481 w961 w1799"></wbr>some <wbr class="w480 w960"></wbr>such fun and <wbr class="w1800"></wbr>games to <wbr class="w480 w960"></wbr>Dan, <wbr class="w481 w961 w1799"></wbr>so I sat back and <wbr class="w480 w960"></wbr>watched him <wbr class="w481 w961 w1799 w1800"></wbr>start <wbr class="w480 w960"></wbr>making it become a <wbr class="w480 w960"></wbr>reality. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p data-grid-id="6359a182-dabb-4cff-8c4b-236e9ac3df86">After the idea really <wbr class="w480 w960"></wbr>started <wbr class="w481 w961"></wbr>taking <wbr class="w1799"></wbr>off, we <wbr class="w480 w960 w1800"></wbr>realized how much <wbr class="w481 w961"></wbr>it <wbr class="w480 w960 w1799"></wbr>would take to get it <wbr class="w480 w960 w1800"></wbr>right- to <wbr class="w481 w961"></wbr>get <wbr class="w1799"></wbr>it perfect. <wbr class="w480 w960"></wbr>Dan started writing <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>algorithms to make <wbr class="w480 w960"></wbr>pixels abide <wbr class="w481 w961 w1799"></wbr>to new <wbr class="w480 w960"></wbr>rules, <wbr class="w1800"></wbr>and began <wbr class="w480 w481 w960 w961 w1799"></wbr>researching the best of <wbr class="w480 w960"></wbr>the best <wbr class="w481 w961 w1799 w1800"></wbr>programmers <wbr class="w480 w960"></wbr>in the world and <wbr class="w480 w481 w960 w961 w1799"></wbr>taking note of <wbr class="w1800"></wbr>their <wbr class="w480 w960"></wbr>names. We <wbr class="w481 w961 w1799"></wbr>raised <wbr class="w480 w960"></wbr>some money from <wbr class="w480 w960 w1800"></wbr>family <wbr class="w481 w961 w1799"></wbr>and friends to <wbr class="w480 w960"></wbr>start the venture <wbr class="w480 w481 w960 w961 w1799"></wbr>which <wbr class="w1800"></wbr>has now become <wbr class="w480 w960"></wbr>TheGrid. <wbr class="w481 w961 w1799"></wbr>We moved to <wbr class="w480 w960"></wbr>San <wbr class="w1800"></wbr>Francisco with <wbr class="w481 w961 w1799"></wbr>one <wbr class="w480 w960"></wbr>employee, a college <wbr class="w480 w960"></wbr>friend <wbr class="w1800"></wbr>of <wbr class="w481 w961 w1799"></wbr>Dans, and <wbr class="w480 w960"></wbr>had a live-work set-<wbr class="w480 w960"></wbr>up <wbr class="w481 w961 w1799"></wbr>in Pacific <wbr class="w1800"></wbr>Heights. <wbr class="w480 w960"></wbr>We had an ex-<wbr class="w481 w961 w1799"></wbr>googler <wbr class="w480 w960"></wbr>Brian Axe <wbr class="w1800"></wbr>helping to <wbr class="w480 w960"></wbr>set <wbr class="w481 w961 w1799"></wbr>goals and keep Dan <wbr class="w480 w960"></wbr>organized <wbr class="w481 w961 w1799 w1800"></wbr>while Dan <wbr class="w480 w960"></wbr>and his dad kept funds <wbr class="w480 w481 w960 w961 w1799"></wbr>rolling in. <wbr class="w1800"></wbr>The project <wbr class="w480 w960"></wbr>really came <wbr class="w481 w961 w1799"></wbr>to life <wbr class="w480 w960"></wbr>after an early <wbr class="w1800"></wbr>facebook <wbr class="w480 w481 w960 w961 w1799"></wbr>offer that Dan <wbr class="w480 w960"></wbr>declined, which led <wbr class="w481 w961 w1799"></wbr>to <wbr class="w480 w960 w1800"></wbr>the loss of his two <wbr class="w480 w960"></wbr>employees, <wbr class="w481 w961 w1799"></wbr>who <wbr class="w480 w960"></wbr>wanted <wbr class="w1800"></wbr>the buyout <wbr class="w480 w960"></wbr>and were <wbr class="w481 w961 w1799"></wbr>realized that <wbr class="w480 w960"></wbr>Dan's <wbr class="w1800"></wbr>vision <wbr class="w481 w961 w1799"></wbr>exceeded <wbr class="w480 w960"></wbr>their own. By then, <wbr class="w480 w960"></wbr>Dan <wbr class="w481 w961 w1799"></wbr>had <wbr class="w1800"></wbr>teamed up <wbr class="w480 w960"></wbr>with Svetly who <wbr class="w481 w961 w1799"></wbr>was <wbr class="w480 w960"></wbr>working <wbr class="w1800"></wbr>through <wbr class="w480 w960"></wbr>company <wbr class="w481 w961 w1799"></wbr>valuations <wbr class="w480 w960"></wbr>and come up <wbr class="w1800"></wbr>with new <wbr class="w480 w481 w960 w961 w1799"></wbr>goals for the team. It <wbr class="w480 w960"></wbr>was a small <wbr class="w481 w961 w1799 w1800"></wbr>core team <wbr class="w480 w960"></wbr>and as we got more <wbr class="w480 w481 w960 w961 w1799"></wbr>investors on <wbr class="w1800"></wbr>board <wbr class="w480 w960"></wbr>with the <wbr class="w481 w961 w1799"></wbr>vision, Dan <wbr class="w480 w960"></wbr>was concurrently <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>recruiting new <wbr class="w480 w960"></wbr>designers and <wbr class="w480 w481 w960 w961 w1799"></wbr>developers to <wbr class="w1800"></wbr>the <wbr class="w480 w960"></wbr>team. It was a <wbr class="w481 w961 w1799"></wbr>crazy <wbr class="w480 w960"></wbr>time and a great <wbr class="w480 w960 w1800"></wbr>experience <wbr class="w481 w961 w1799"></wbr>for me. I <wbr class="w480 w960"></wbr>watched my husband <wbr class="w480 w481 w960 w961 w1799"></wbr>fail, <wbr class="w1800"></wbr>lead, succeed, <wbr class="w480 w960"></wbr>win, lose, and <wbr class="w481 w961 w1799"></wbr>stay a <wbr class="w480 w960"></wbr>solid, <wbr class="w1800"></wbr>never stressed <wbr class="w480 w960"></wbr>man of <wbr class="w481 w961 w1799"></wbr>his word. From <wbr class="w480 w960"></wbr>a wife's <wbr class="w1800"></wbr>lens, it <wbr class="w481 w961 w1799"></wbr>has <wbr class="w480 w960"></wbr>not been perfect, or <wbr class="w480 w960"></wbr>easy, or <wbr class="w481 w961 w1799 w1800"></wbr>painless but it <wbr class="w480 w960"></wbr>has been our own. <wbr class="w481 w961 w1799"></wbr>His <wbr class="w480 w960"></wbr>clear <wbr class="w1800"></wbr>vision is what I <wbr class="w480 w960"></wbr>know will <wbr class="w481 w961 w1799"></wbr>pay off <wbr class="w480 w960"></wbr>when this all <wbr class="w1800"></wbr>works... <wbr class="w480 w960"></wbr>and <wbr class="w481 w961 w1799"></wbr>as I type this blog, <wbr class="w480 w960"></wbr>using the first <wbr class="w481 w961 w1799 w1800"></wbr>working <wbr class="w480 w960"></wbr>version of the "Post <wbr class="w480 w481 w960 w961 w1799"></wbr>Editor" I <wbr class="w1800"></wbr>couldn't be <wbr class="w480 w960"></wbr>more proud <wbr class="w481 w961 w1799"></wbr>of him <wbr class="w480 w960"></wbr>and the team's <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>accomplishments and <wbr class="w480 w960"></wbr>over five <wbr class="w481 w961 w1799"></wbr>years. The <wbr class="w480 w960 w1800"></wbr>sacrifices they have <wbr class="w480 w481 w960 w961 w1799"></wbr>made to attempt the <wbr class="w480 w960 w1800"></wbr>impossible <wbr class="w481 w961 w1799"></wbr>have been <wbr class="w480 w960"></wbr>unprecedented and <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>painful to watch. <wbr class="w480 w960"></wbr>Blood family and <wbr class="w480 w481 w960 w961 w1799"></wbr>friends <wbr class="w1800"></wbr>have had to <wbr class="w480 w960"></wbr>come second <wbr class="w481 w961 w1799"></wbr>to <wbr class="w480 w960"></wbr>TheGrid family, <wbr class="w1800"></wbr>but <wbr class="w480 w960"></wbr>the <wbr class="w481 w961 w1799"></wbr>possibility is still <wbr class="w480 w960"></wbr>endless and as <wbr class="w481 w961 w1799"></wbr>the <wbr class="w480 w960 w1800"></wbr>release of an actual <wbr class="w480 w960"></wbr>first <wbr class="w481 w961 w1799"></wbr>working version <wbr class="w480 w960 w1800"></wbr>draws nearer, I <wbr class="w481 w961 w1799"></wbr>cannot <wbr class="w480 w960"></wbr>describe in words how <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>bittersweet it feels...</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p data-grid-id="3e3e8745-252f-4b87-8d28-8786be792392"><i data-grid-id="12ec5299-ab87-481b-9a19-b631bc9a9d65">Here is a photo of <wbr class="w480 w960"></wbr>Dan's first <wbr class="w481 w961 w1799"></wbr>workspace <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>our Windsor, CA <wbr class="w480 w481 w960 w961 w1799"></wbr>home that we rented <wbr class="w480 w960"></wbr>in <wbr class="w1800"></wbr>2007. Aka <wbr class="w481 w961 w1799"></wbr>the "Lea <wbr class="w480 w960"></wbr>Street" house</i></p></span></h1></div></article><article subject="panel" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_decoration w_headline w_title w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-alternate-g-heading-t-headline-a">theBlog feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_separator w_decoration w_leader w_long_headline w_long_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-desktop-l-one-3-l-one"></div><style id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-color">body{background-color: rgba(21, 26, 32, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_separator w_decoration w_leader w_long_headline w_long_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-cinema-l-one-3-l-one"></div><style id="u-f4cba2d3-1ac1-4590-984c-b1e9dfe04a34-color">body{background-color: rgba(21, 26, 32, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1264,7 +1292,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -1291,40 +1319,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -1333,19 +1390,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -1493,11 +1538,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -1506,6 +1553,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -1518,79 +1567,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -1614,29 +1878,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -1655,14 +1922,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -1677,7 +1944,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
