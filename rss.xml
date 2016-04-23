@@ -4,25 +4,32 @@
         <description><![CDATA[theBlog]]></description>
         <link>https://thegrid.ai/theblog/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Mon, 23 Nov 2015 23:40:43 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 23 Apr 2016 07:09:22 GMT</lastBuildDate>
         <atom:link href="https://thegrid.ai/theblog/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[“If people knew how hard I worked to achieve my mastery, it wouldn’t seem so wonderful after all.”– Michelangelo]]></title>
-            <description><![CDATA[<article><h1></h1><p>null</p></article>]]></description>
+            <description><![CDATA[<h1></h1>]]></description>
             <link>https://thegrid.ai/theblog/how-thegrid-was-born/index.html</link>
             <guid isPermaLink="false">6bc05b63-1211-499a-8d65-8b96960446d1</guid>
             <pubDate>Mon, 23 Nov 2015 23:40:23 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[A cool photo]]></title>
+            <description><![CDATA[<article><h1>A cool photo</h1><p>My cool mountain top view yay</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/9d3593fcb67dfe44606e1918870b650687a18652.jpg"></article>]]></description>
+            <link>https://source.unsplash.com/random</link>
+            <guid isPermaLink="false">f23e3d26-510f-4f9f-a783-a4e930f0ad0b</guid>
+            <pubDate>Sat, 23 Apr 2016 07:08:59 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[If You're Lucky Enough To Find A Weirdo, Never Let That Weirdo Go]]></title>
-            <description><![CDATA[<article><h1>If You're Lucky Enough To Find A Weirdo, Never Let That Weirdo Go</h1><p>Lauren Martin in Dating Are you dating someone utterly out of his or her mind? Do you find yourself thinking about how crazy and "all over the place" your significant other is? Do you find yourself describing your girlfriend as weird or your boyfriend as absolutely insane?</p><img src="http://cdn29.elitedaily.com/wp-content/uploads/2015/06/tumblr_nowzfaH1IR1rzs2lno1_1280.jpg"></article>]]></description>
+            <description><![CDATA[<article><h1>If You're Lucky Enough To Find A Weirdo, Never Let That Weirdo Go</h1><p>Lauren Martin in Dating Are you dating someone utterly out of his or her mind? Do you find yourself thinking about how crazy and "all over the place" your significant other is? Do you find yourself describing your girlfriend as weird or your boyfriend as absolutely insane?</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/a8b7f7fa552a8c43e811c811c3a4e7325f3bb79d.jpg"></article>]]></description>
             <link>http://elitedaily.com/dating/find-yourself-a-weirdo/1052393/</link>
             <guid isPermaLink="false">5892fed3-4c7e-42dc-a447-d88cdb3c0ecb</guid>
             <pubDate>Mon, 23 Nov 2015 19:05:53 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[The Grid - Hello Beta]]></title>
-            <description><![CDATA[<article><h1>The Grid - Hello Beta</h1><p>Hello Founding Members! A message from our team about what you can expect fromThe Grid Beta as we begin rollout.</p><img src="https://i.ytimg.com/vi/Itv1Di5-NOM/hqdefault.jpg"></article>]]></description>
+            <description><![CDATA[<article><h1>The Grid - Hello Beta</h1><p>Hello Founding Members! A message from our team about what you can expect fromThe Grid Beta as we begin rollout.</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/b8e9fa4ca90ad5b7e72174090b26af762fff09c8.jpg"></article>]]></description>
             <link>https://www.youtube.com/watch?v=Itv1Di5-NOM&amp;feature=youtu.be</link>
             <guid isPermaLink="false">b2a89190-9952-487a-945f-c18dcd8b5092</guid>
             <pubDate>Mon, 23 Nov 2015 19:05:53 GMT</pubDate>
